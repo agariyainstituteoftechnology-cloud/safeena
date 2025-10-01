@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var a = Number(prompt("Enter your First number:"));
-        var b = Number(prompt("Enter your First number:"));
-        var result = a + b;
-        console.log("your answer is:" + result) ;
+       var table = prompt("Enter a number..");
+     var n = Number(table);
+     if (!Number.isFinite(n)) {
+     console.log("Please enter a number..");
+     } else {
+     console.log(`Table of ${n}:`);
+     for (var i = 1; i <= 10; i++) {
+      console.log(` ${n} x ${i} = ${n * i}`);
+    }
+  }
     </script>
 </head>
 <body>
+    
 </body>
 </html>
