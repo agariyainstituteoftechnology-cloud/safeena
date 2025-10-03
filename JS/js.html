@@ -19,7 +19,7 @@
 
     if(num>=100){ word += ones[Math.floor(num/100)] + " hundred "; num %= 100; }
     if(num>=10 && num<20) word += teens[num-10];else{ word += tens[Math.floor(num/10)]; if(num%10>0) word += "-" + ones[num%10]; }
-    return word;
+    return word; 
 }
     console.log(numberToWords(n));
     </script>
