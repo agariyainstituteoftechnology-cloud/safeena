@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATM Page</title>
+</head>
+<body>
+  <h1 id="welcome"></h1>
+  <p id="balance"></p>
+
+  <script>
+    // --- Step 1: LocalStorage se data uthao ---
+    let firstname = localStorage.getItem("firstname");
+    let balance = parseInt(localStorage.getItem("balance")) || 0;
+
+    // --- Step 2: User ko welcome message dikhao ---
+    document.getElementById("welcome").innerText = "Welcome, " + firstname + "!";
+    document.getElementById("balance").innerText = "Your current balance: " + balance + " PKR";
+
+    // --- Step 3: User se withdraw amount lo ---
+    let amount = +prompt("Enter amount to withdraw:");
+
+    // Check balance
+    if (isNaN(amount) || amount <= 0) {
+      alert("Invalid amount entered!");
+    } else if (amount > balance) {
+      alert("Insufficient balance!");
+    } else {
+      // --- Step 4: Notes calculate karo ---
+      let n5000 = Math.floor(amount / 5000);
+      amount = amount % 5000;
+
+      let n1000 = Math.floor(amount / 1000);
+      amount = amount % 1000;
+
+      let n500 = Math.floor(amount / 500);
+      amount = amount % 500;
+
+      // --- Step 5: Result show karo ---
+      console.log("Withdrawal successful!");
+      if (n5000 > 0) console.log("5000 x " + n5000);
+      if (n1000 > 0) console.log("1000 x " + n1000);
+      if (n500 > 0) console.log("500 x " + n500);
+
+      // --- Step 6: Balance update karo ---
+      balance = balance - (n5000 * 5000 + n1000 * 1000 + n500 * 500);
+      localStorage.setItem("balance", balance);
+
+      // --- Step 7: Updated balance show karo ---
+      alert("Transaction successful! New balance: " + balance + " PKR");
+      document.getElementById("balance").innerText = "Your new balance: " + balance + " PKR";
+    }
+  </script>
+</body>
+</html>

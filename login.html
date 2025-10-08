@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+</head>
+<body>
+  <h1>Login Page</h1>
+  <form id="login-form">
+    <div id="email-wrap">
+      <label>Email</label>
+      <input type="email" name="email" id="email" />
+    </div>
+    <div id="password-wrap">
+      <label>Password</label>
+      <input type="password" name="password" id="password" />
+    </div>
+    <input type="submit" value="Submit" />
+  </form>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Get input values
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value.trim();
+
+      // Remove previous error messages
+      document.querySelectorAll("span.error").forEach(el => el.remove());
+
+      // Validate
+      let ok = true;
+      if (email === "") {
+        document.getElementById("email-wrap").innerHTML +=
+          '<span class="error" style="color:red;"> Email is required.</span>';
+        ok = false;
+      }
+      if (password === "") {
+        document.getElementById("password-wrap").innerHTML +=
+          '<span class="error" style="color:red;"> Password is required.</span>';
+        ok = false;
+      }
+
+      if (!ok) return;
+
+      // Check saved credentials
+      let savedEmail = localStorage.getItem("email");
+      let savedPass = localStorage.getItem("password");
+
+      if (savedEmail === email && savedPass === password) {
+        alert("Login successful!");
+        window.location.href = "js.html"; // ✅ Go to ATM page
+      } else {
+        document.getElementById("login-form").innerHTML +=
+          '<span class="error" style="color:red;"> Invalid email or password.</span>';
+      }
+    });
+  </script>
+</body>
+</html>
