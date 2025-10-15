@@ -1,4 +1,4 @@
-/*GLOBAL CSS START*/
+/*-----GLOBAL CSS START-----*/
 * {
     box-sizing: border-box;
     margin: 0%;
@@ -70,8 +70,11 @@ body {
     width: 90%;
 }
 
-/*GLOBAL CSS END*/
-/*HEADER CSS*/
+/*-----GLOBAL CSS END-----*/
+/*----------------------------*/
+
+
+/*-----HEADER SECTION-----*/
 .main-header>.wrapper {
     padding: 20px;
 }
@@ -80,13 +83,6 @@ body {
     margin-top: 20px;
 }
 
-.main-header .logo {
-    padding-left: 30px;
-}
-
-.navicon {
-    display: none;
-}
 
 .nav :nth-last-child(1n + 1) {
     margin-left: 9px;
@@ -111,23 +107,22 @@ body {
     top: 16px;
     left: -15px;
 }
+/*----------------------------*/
 
-/* menu icon default hidden*/
-.menu {
-    display: none;
-}
+/*---enu icon default hidden---*/
 
-.menu-icon {
+.navicon {
     display: none;
     cursor: pointer;
 }
 
-.menu-icon img {
+.navicon img {
     width: 28px;
     height: 28px;
 }
+/*----------------------------*/
 
-/*BANNER*/
+/*-----BANNER SECTION-----*/
 .banner {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -177,8 +172,9 @@ body {
     position: relative;
     right: -80px;
 }
+/*----------------------------*/
 
-/*CATEGORIES SECTION*/
+/*-----CATEGORIES SECTION-----*/
 .items {
     display: grid;
     grid-template-columns: (4 1fr);
@@ -218,27 +214,24 @@ body {
 .shoes {
     grid-area: 2 / 3 / 3 / 5;
 }
+/*----------------------------*/
 
-/*BEST SELLER*/
+/*-----BEST SELLER SECTION-----*/
 .best-seller .header-2 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 40px;
 }
 
-.listing {
-    height: 1787px;
-    padding: 30px;
+.best-seller{
+    background-color: #FAFCFE;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .b-sale {
-    background-color: #FAFCFE;
     height: 1225px;
     padding: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .products {
@@ -346,8 +339,13 @@ body {
     border: none;
     margin-right: 5px;
 }
+/*----------------------------*/
 
-/*CATEGORY-2*/
+/*-----CATEGORY-2 SECTION-----*/
+.category{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
 .items-2 {
     display: grid;
     grid-template-columns: (3 1fr);
@@ -355,8 +353,6 @@ body {
     grid-template-areas:
         "New-Arrivals Street-Style off";
     gap: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .card {
@@ -377,13 +373,16 @@ body {
     color: var(--text-color-blue);
     opacity: 90%;
 }
+/*----------------------------*/
 
-/*Latest From Blog*/
+/*-----Latest From Blog-----*/
+.latest{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .latest-products {
     height: 546px;
     width: 415px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .latest .header-2 {
@@ -409,8 +408,9 @@ body {
     line-height: 100%;
     font-size: 24px;
 }
+/*----------------------------*/
 
-/*BLOG SECTION*/
+/*-----BLOG SECTION-----*/
 .blog {
     margin-right: 40px;
     background-color: #FAFCFE;
@@ -425,7 +425,7 @@ body {
     margin-bottom: -5px;
 }
 
-/*COLUMNS*/
+/*---COLUMNS---*/
 .text h3 {
     font-weight: 500;
     font-size: 18px;
@@ -460,7 +460,6 @@ div .radius {
 .info {
     font-weight: 450;
     font-size: 16px;
-
 }
 
 div .radius-1 {
@@ -472,30 +471,26 @@ div .radius-1 {
     margin-top: 15px;
     text-align: center;
 }
+/*----------------------------*/
 
-/*FOOTER*/
+/*-----FOOTER SECTION-----*/
 .footer-sec {
-    /* height: 602px; */
-    margin-top: 20px;
-    margin-bottom: 20px;
+    background-color: #FAFCFE;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .footer {
-    background-color: #FAFCFE;
     padding: 50px 80px;
     font-size: 16px;
     font-weight: 400px;
 }
 
-.center {
-    position: relative;
-    margin-top: 60px;
-}
-
 .center .f-icon {
     position: absolute;
     display: inline-block;
-    margin-top: -35px;
+    margin-top: -30px;
     margin-left: 600px;
     width: 69px;
     height: 69px;
@@ -563,19 +558,42 @@ div .radius-1 {
 hr {
     color: var(--text-color-blue);
 }
+/*----------------------------*/
+/*------------1 PAGE END-----------*/
 
-/* LISTING PAGE CSS */
+/*----------LISTING PAGE CSS (PAGE 2)----------*/
 .listing {
-
     background-color: #FAFCFE;
     padding-top: 30px;
+    height: 1787px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.slider {
+.features {
+    margin-left: 40px;
+    margin-bottom: 40px;
+    color: var(--text-color-blue);
+    text-align: left;
+}
 
+.features div {
+    margin-left: 15px;
+}
+
+.select {
+    margin: 4px;
+    border: none;
+    background-color: #FAFCFE;
+}
+/*----------------------------*/
+
+.slider {
     display: flex;
     justify-content: center;
     margin-top: 60px;
+    margin-bottom: 0px;
 }
 
 .slider div {
@@ -589,36 +607,14 @@ hr {
     background-color: var(--text-color-2);
     width: 34px;
     height: 34px;
-
     text-align: center;
     color: #ffffff;
 }
+/*----------------------------*/
+/*------------2 PAGE END-----------*/
 
-.features {
-    margin-left: 40px;
-    margin-bottom: 40px;
-    color: var(--text-color-blue);
-    text-align: left;
-}
-
-.select {
-    margin: 4px;
-    border: none;
-    background-color: #FAFCFE;
-}
-
-.features div {
-    margin-left: 15px;
-}
-
-/* Page  3 */
-
-/*DETAILS PAGE CSS*/
-.page-3 {
-    background-color: #F4F8F9;
-}
-
-.page {
+/*----------DETAILS PAGE CSS(PAGE 3)----------*/
+.page{
     background-color: #FAFCFE;
 }
 
@@ -626,6 +622,7 @@ hr {
     padding: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+    
 }
 
 section .selected {
@@ -654,7 +651,7 @@ section .selected-1 {
     position: absolute;
     inset: 0;
     top: 20px;
-    left: 370px;
+    left: 390px;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -666,7 +663,7 @@ section .selected-1 {
     position: absolute;
     inset: 0;
     top: 290px;
-    left: 370px;
+    left: 390px;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -686,7 +683,7 @@ section .selected-1 {
     padding: 8px;
 }
 
-/* store banner */
+/*-----PRODUCT DETAIL FORM-----*/
 
 .sku {
     color: var(--text-color-blue);
@@ -889,8 +886,9 @@ input[type="checkbox"] {
 .term-2 {
     opacity: 70%;
 }
+/*----------------------------*/
 
-/* description */
+/*-----DESCRIPTION-----*/
 .describe {
     padding: 0px 60px;
 }
@@ -933,6 +931,7 @@ input[type="checkbox"] {
     overflow: hidden;
 }
 
+/*-----REVIEWS-----*/
 .review-9 .comments {
     margin-top: 30px;
 }
@@ -941,16 +940,15 @@ input[type="checkbox"] {
     color: var(--text-color-2);
     font-weight: 500px;
     font-size: 16px;
-    margin-left: 345px;
+    margin-left: 390px;
     margin-top: 8px;
 }
 
 .review-9 .duration {
-    margin-left: 310px;
+    margin-left: 360px;
     opacity: 70%;
     color: var(--text-color-blue);
     letter-spacing: 0.34px;
-
 }
 
 .d-para {
@@ -978,7 +976,9 @@ input[type="checkbox"] {
 .comment {
     margin-top: 20px;
 }
+/*----------------------------*/
 
+/*-----RELATED PRODUCTS-----*/
 .related-pro {
     padding: 15px 60px;
 }
@@ -994,14 +994,16 @@ input[type="checkbox"] {
     flex-direction: row-reverse;
     padding: 0px 20px 10px 0px;
 }
+/*----------------------------*/
+/*------------3 PAGE END-----------*/
+
 
 /*===========RESPONSIVE CSS===========*/
 
 /*LANDSCAPE ( Big size tablets )*/
 @media (max-width: 1024px) {
 
-
-    /*--(PAGE-1 & 2) HOME & LISTING PAGE RESPONSIVE CSS--*/
+    /*-------(PAGE-1 & 2) HOME & LISTING PAGE RESPONSIVE CSS-------*/
     body {
         font-size: 12px;
         font-weight: 400px;
@@ -1012,7 +1014,7 @@ input[type="checkbox"] {
         margin: 0;
     }
 
-    /*--BANNERSECTION--*/
+    /*-----BANNER SECTION-----*/
     .banner h1 {
         width: 400px;
         line-height: 60px;
@@ -1029,7 +1031,7 @@ input[type="checkbox"] {
         width: 500px;
     }
 
-    /*--CATEGORY SECTION--*/
+    /*-----CATEGORY SECTION-----*/
     .items {
         grid-template-rows: 250px 250px;
         margin-left: 0;
@@ -1038,7 +1040,7 @@ input[type="checkbox"] {
     }
 
 
-    /*--BEST SELLER--*/
+    /*-----BEST SELLER-----*/
     .listing {
         height: auto;
     }
@@ -1095,7 +1097,7 @@ input[type="checkbox"] {
         padding: 5px;
     }
 
-    /*--CATEGORY-2--*/
+    /*-----CATEGORY-2-----*/
     .items-2 {
         grid-template-rows: 305px;
         grid-template-areas:
@@ -1107,8 +1109,8 @@ input[type="checkbox"] {
         padding: 12px 26px;
     }
 
-    /*--BLOG SECTION--*/
-    /*--Blog heading--*/
+    /*-----BLOG SECTION-----*/
+    /*-----Blog heading-----*/
     .latest-products {
         height: auto;
     }
@@ -1126,7 +1128,7 @@ input[type="checkbox"] {
         font-size: 20px;
     }
 
-    /*--Blog--*/
+    /*-----Blog Section-----*/
     .blog {
         margin: 0px 8px 0px 8px;
     }
@@ -1144,7 +1146,7 @@ input[type="checkbox"] {
         gap: 20px;
     }
 
-    /*--FOOTER SECTION--*/
+    /*-----FOOTER SECTION-----*/
     .center .f-icon {
         margin-left: 490px;
     }
@@ -1162,9 +1164,7 @@ input[type="checkbox"] {
         margin-left: 210px
     }
 
-    /*--(PAGE-3) DETAILS PAGE RESPONSIVE CSS--*/
-
-
+    /*-------(PAGE-3) DETAILS PAGE RESPONSIVE CSS-------*/
     .details {
         padding: 20px;
     }
@@ -1215,11 +1215,11 @@ input[type="checkbox"] {
     }
 }
 
-/* TABLET ( Normal screen )*/
+/*-----TABLET PORTRAIT (small tablets)-------*/
 @media (max-width: 992px) {
 
-    /*--(PAGE-1 & 2) HOME & LISTING PAGE RESPONSIVE CSS--*/
-    /*--Banner--*/
+    /*-------(PAGE-1 & 2) HOME & LISTING PAGE RESPONSIVE CSS-------*/
+    /*-----Banner-----*/
     .banner .banner-img img {
         width: 500px;
     }
@@ -1228,7 +1228,7 @@ input[type="checkbox"] {
         margin-top: 60px;
     }
 
-    /*--BEST SELLER--*/
+    /*-----BEST SELLER-----*/
     .listing {
         height: auto;
     }
@@ -1266,7 +1266,7 @@ input[type="checkbox"] {
         margin-top: 5px;
     }
 
-    /*--CATEGORY 2--*/
+    /*-----CATEGORY 2-----*/
     .items-2 {
         grid-template-rows: 305px;
         grid-template-areas:
@@ -1278,7 +1278,7 @@ input[type="checkbox"] {
         padding: 12px 26px;
     }
 
-    /*--Blog section--*/
+    /*-----Blog section-----*/
     .latest-products {
         flex-wrap: wrap;
         width: 100%;
@@ -1290,7 +1290,7 @@ input[type="checkbox"] {
         margin-left: 0px;
     }
 
-    /*--Footer--*/
+    /*-----FOOTER SECTION-----*/
     .payment-1 {
         margin-left: 180px;
     }
@@ -1299,8 +1299,8 @@ input[type="checkbox"] {
         margin-left: 350px;
     }
 
-    /*--(PAGE-3) DETAILS PAGE RESPONSIVE CSS--*/
-    /*--Form Section--*/
+    /*-------(PAGE-3) DETAILS PAGE RESPONSIVE CSS-------*/
+    /*-----Form Section-----*/
 
     .img-sliders .srch-slider {
         position: absolute;
@@ -1377,14 +1377,17 @@ input[type="checkbox"] {
     .review-9 .duration {
         margin-left: 50px;
     }
+    .center .f-icon {
+        margin-left: 45vw;
+    }
 }
 
-/*mobile*/
+/*-----MOBILE (tablet portrait or big mobile)-----*/
 @media (max-width: 768px) {
 
-    /*--(PAGE-1 & 2) HOME & LISTING PAGE RESPONSIVE CSS--*/
+    /*-------(PAGE-1 & 2) HOME & LISTING PAGE RESPONSIVE CSS-------*/
 
-    /*--HERADER SECTON--*/
+    /*-----HERADER SECTON-----*/
 
     .main-header .logo img {
         width: 70px;
@@ -1407,7 +1410,7 @@ input[type="checkbox"] {
         margin-left: 20px;
     }
 
-    /*--BANNER SECTION--*/
+    /*-----BANNER SECTION-----*/
     .banner h1 {
         width: 380px;
         line-height: 50px;
@@ -1427,7 +1430,7 @@ input[type="checkbox"] {
     }
 
 
-    /*--BEST SELLER-*/
+    /*-----BEST SELLER SECTION----*/
     .b-sale {
         padding: 10px;
         height: auto;
@@ -1487,13 +1490,13 @@ input[type="checkbox"] {
         padding: 12px;
     }
 
-    /*--CATEGORY SECTION--*/
+    /*-----CATEGORY SECTION-----*/
     .items {
         grid-template-rows: 180px 180px;
         padding-bottom: 0px;
     }
 
-    /*--CATEGORY-2--*/
+    /*----CATEGORY-2-----*/
     .items-2 {
         display: grid;
         grid-template-rows: 250px;
@@ -1507,8 +1510,7 @@ input[type="checkbox"] {
         padding: 10px 16px;
     }
 
-
-    /*--BLOG SECTION--*/
+    /*-----BLOG SECTION-----*/
     .latest .header-2 {
         margin-top: 40px;
     }
@@ -1555,7 +1557,7 @@ input[type="checkbox"] {
         width: 26px;
     }
 
-    /*--Footer--*/
+    /*-----FOOTER SECTION-----*/
     .page {
         height: auto;
     }
@@ -1578,11 +1580,9 @@ input[type="checkbox"] {
         height: 30px;
     }
 
-
     .center .f-icon {
         margin-left: 45vw;
     }
-
 
     .footer h2 {
         font-size: 14px;
@@ -1610,18 +1610,15 @@ input[type="checkbox"] {
         margin: 0px;
         font-size: 11px;
     }
-
-
-    /*--2 PAGE RESPONSIVE--*/
+    /*-----2 PAGE RESPONSIVE-----*/
     .listing {
         height: auto;
         padding: 10px;
     }
 
-    /*--(PAGE-3) DETAILS PAGE RESPONSIVE CSS--*/
-    /*--Form Section--*/
-
-
+    
+    /*-----(PAGE-3) DETAILS PAGE RESPONSIVE CSS-----*/
+    /*-----Form Section-----*/
     .option-title {
         line-height: 28px;
     }
@@ -1721,6 +1718,7 @@ input[type="checkbox"] {
     }
 }
 
+/*-----MOBILE MEDIUM-----*/
 @media (max-width: 620px) {
     .items {
         grid-template-rows: 160px 160px;
@@ -1815,6 +1813,7 @@ input[type="checkbox"] {
     }
 }
 
+/*-----SMALL MOBILE-----*/
 @media (max-width: 480px) {
     .main-header .logo {
         padding: 0px;
@@ -1893,9 +1892,6 @@ input[type="checkbox"] {
     .header-2 p {
         margin-top: 10px;
     }
-
-
-
     .center .f-icon {
         margin-left: 135px;
     }
@@ -1907,8 +1903,6 @@ input[type="checkbox"] {
     .selected {
         width: 100%;
     }
-
-
 
     .img-sliders .srch-slider {
         top: 14px;
@@ -2036,8 +2030,6 @@ input[type="checkbox"] {
         width: 55px;
         height: 58px;
     }
-
-
     .review-9 {
         height: auto;
         width: 300px;
@@ -2055,7 +2047,7 @@ input[type="checkbox"] {
     }
 
     .center .f-icon {
-        margin-left: 180px;
+        margin-left: 45vw;
     }
 
     .latest-products {

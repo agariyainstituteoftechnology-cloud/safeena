@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      var n = Number(prompt("Enter number:"));
+
+    // Words arraysnu
+    var ones = ["","one","two","three","four","five","six","seven","eight","nine"];
+    var teens = ["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+    var tens = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+
+    // Function to convert
+    function numberToWords(num){
+    if(num==0) return "zero";
+    var word = "";
+
+    if(num>=100){ word += ones[Math.floor(num/100)] + " hundred "; num %= 100; }
+    if(num>=10 && num<20) word += teens[num-10];else{ word += tens[Math.floor(num/10)]; if(num%10>0) word += "-" + ones[num%10]; }
+    return word; 
+}
+    console.log(numberToWords(n));
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
